@@ -32,7 +32,7 @@ let rec expandSequence data =
     seq { if not (Seq.isEmpty data) then
              let firstCharacter = Seq.head data
              if ("~".Equals firstCharacter) then                 
-                  let repeatCount = chars.IndexOf ((Seq.nth 1 data).Chars 0)
+                  let repeatCount = chars.IndexOf ((Seq.nth 1 data).Chars 0) + 1
                   let characterToRepeat = Seq.nth 2 data
                   yield String.replicate repeatCount characterToRepeat
                   yield! expandSequence (Seq.skip 3 data)
