@@ -1,0 +1,4 @@
+*.userprefs
+*.exe
+fsharprle/obj/
+fsharprle/bin/
