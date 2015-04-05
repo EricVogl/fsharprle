@@ -1,5 +1,4 @@
 ﻿open System
-open System.Text.RegularExpressions
 
 [<Literal>] 
 let usage = "usage: <compress|expand> string"
