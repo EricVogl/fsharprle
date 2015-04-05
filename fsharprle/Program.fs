@@ -44,11 +44,6 @@ let expand data =
     expandSequence data
     |> String.Concat ;;
 
-let decode str =
-    [ for m in Regex.Matches(str, "(\d+)(.)") -> m ]
-    |> List.map (fun m -> Int32.Parse(m.Groups.[1].Value), m.Groups.[2].Value)
-    |> List.fold (fun acc (len, s) -> acc + String.replicate len s) "" 
-
 let encodeOrDecode command data = 
     match command with
     | "compress" -> compress data
