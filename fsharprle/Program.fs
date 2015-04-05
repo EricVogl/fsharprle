@@ -3,7 +3,9 @@ open System.Text.RegularExpressions
 
 [<Literal>] 
 let usage = "usage: <compress|expand> string"
+[<Literal>] 
 let minLength = 3
+[<Literal>] 
 let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 let rec characterAndCountTuples data = 
